@@ -1,1 +1,119 @@
+/* ==========================================================================
+   SWEET CRUMBS NAROK — ARTISANAL WARMTH STYLESHEET
+   File: styles.css
+   ========================================================================== */
 
+/* --- Custom Variables & Palette --- */
+:root {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  --color-terracotta: #c86d51;
+  --color-terracotta-dark: #9b462c;
+  --color-terracotta-light: #faede6;
+  --color-cream: #fdf9f3;
+  --color-sand: #f7f2ea;
+  --color-navy: #0f2442;
+  --color-espresso: #2c1810;
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #20ba59;
+
+  --border-light: #ede3d5;
+  --border-warm: #f0e6da;
+}
+
+/* --- Smooth Scrolling & Global Resets --- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f7f3ed;
+  color: var(--color-espresso);
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+}
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-light);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-terracotta);
+}
+
+/* --- Component Transitions & States --- */
+.smooth-transition {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Nav Link Button Active State */
+.nav-link-btn.active {
+  color: var(--color-terracotta);
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Hero Cake Switcher Active Thumbnail */
+.hero-thumb.active {
+  border-color: var(--color-terracotta) !important;
+  border-width: 2px !important;
+}
+
+/* 3D Studio Tier Button States */
+.studio-tier.active {
+  border-color: var(--color-terracotta) !important;
+  border-width: 2px !important;
+  background-color: var(--color-terracotta-light) !important;
+}
+
+/* Sweetness Pill States */
+.studio-sweetness.active {
+  border-color: var(--color-terracotta) !important;
+  background-color: var(--color-terracotta-light) !important;
+  color: var(--color-terracotta) !important;
+  font-weight: 700 !important;
+}
+
+/* --- Three.js 3D Canvas Canvas Resizing & Cursor --- */
+#desktop-cake-3d canvas {
+  width: 100% !important;
+  height: 100% !important;
+  outline: none;
+}
+
+#desktop-cake-3d {
+  touch-action: none;
+}
+
+/* --- Details / Summary Accordion Styling --- */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* --- WhatsApp CTA Buttons --- */
+.btn-whatsapp {
+  background-color: var(--color-whatsapp);
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-whatsapp:hover {
+  background-color: var(--color-whatsapp-hover);
+  transform: translateY(-1px);
+}
